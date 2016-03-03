@@ -56,7 +56,20 @@
     <servlet-name>LogoutServlet</servlet-name>
     <url-pattern>/servlet/LogoutServlet</url-pattern>
   </servlet-mapping>
-  
+  <filter>
+        <filter-name>LoginFilter</filter-name>
+        <filter-class>filter.LoginFilter</filter-class>
+        
+        
+    </filter>
+    <filter-mapping>
+        <filter-name>LoginFilter</filter-name>
+        <url-pattern>/cart.jsp</url-pattern>
+        <url-pattern>/items_bought.jsp</url-pattern>
+        <url-pattern>/login_success.jsp</url-pattern>
+        <url-pattern>/add_success.jsp</url-pattern>
+        <url-pattern>/add_failure.jsp</url-pattern>
+    </filter-mapping>
  
   <error-page>
     <error-code>404</error-code>
